@@ -1,4 +1,9 @@
 class Animal
+  attr_reader :name
+attr_writer :name
+attr_accessor :name
+
+
   def initialize(type, number_of_legs, name = "Unknown")
     @id = Random.rand(1..1000)
     @name = name
