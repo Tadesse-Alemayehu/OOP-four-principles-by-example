@@ -1,3 +1,4 @@
+require_relative 'remover.rb'
 class Animal
   attr_reader :name
 attr_writer :name
@@ -9,6 +10,11 @@ attr_accessor :name
     @name = name
     @number_of_legs = number_of_legs
     @type = type
+  end
+
+  def remove_leg
+    remover = Remover.new()
+    @number_of_legs = remover.decrease(@number_of_legs)
   end
 
   def speak
